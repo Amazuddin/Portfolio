@@ -471,3 +471,171 @@
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+
+/* Publication Card Styles */
+        .publication-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #6c63ff;
+        }
+        
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(108, 99, 255, 0.15);
+            border-left-width: 6px;
+        }
+        
+        .publication-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .publication-icon i {
+            font-size: 28px;
+            color: white;
+        }
+        
+        .publication-card h4 {
+            color: #2d3748;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .publication-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .publication-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+            color: white;
+        }
+        
+        .publication-source {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #f7fafc;
+            color: #4a5568;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Experience & Education Timeline Styles */
+        .timeline-item {
+            position: relative;
+            padding: 25px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #6c63ff;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(108, 99, 255, 0.15);
+            border-left-width: 6px;
+        }
+        
+        .timeline-item h5 {
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-date {
+            display: inline-block;
+            padding: 6px 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        
+        .timeline-company {
+            color: #4a5568;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+        
+        .timeline-company i {
+            margin-right: 8px;
+            color: #667eea;
+        }
+        
+        .custom-nav-pills .nav-link {
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #667eea;
+        }
+        
+        .custom-nav-pills .nav-link.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: transparent;
+        }
+        
+        .custom-nav-pills .nav-link:not(.active) {
+            background: white;
+            color: #667eea;
+        }
+        
+        .custom-nav-pills .nav-link:hover:not(.active) {
+            background: #f7fafc;
+            transform: scale(1.02);
+        }
+
+        /* Skill Category Styles */
+        .skill-category {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .skill-category h5 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .badge {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }

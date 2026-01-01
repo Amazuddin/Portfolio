@@ -5,7 +5,6 @@
     --light: #FAFAFB;
     --dark: #12141D;
 }
-
 /* Floating Bubbles - FIXED */
 .bubbles-container {
     position: fixed;

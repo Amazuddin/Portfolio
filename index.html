@@ -1086,28 +1086,19 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 	<!-- Floating Bubbles -->
-<div class="bubbles-container">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-</div>
+	<div class="bubbles-container">
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	        <div class="bubble"></div>
+	    </div>
+
 
 
     <!-- JavaScript Libraries -->
@@ -1125,6 +1116,41 @@
 
     <!-- Template Javascript -->
     <script src="/javascript/main.js"></script>
+
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.stat-number');
+    let animated = false;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 16);
+                
+                animated = true;
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
+</script>
 </body>
 
 </html>

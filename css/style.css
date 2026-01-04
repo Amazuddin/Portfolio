@@ -542,10 +542,6 @@ body {
     font-weight: normal;
 }
 
-section {
-    scroll-margin-top: 80px !important;
-}
-
 /*** Navbar ***/
 /* Fix navbar visibility */
 .navbar.fixed-top {

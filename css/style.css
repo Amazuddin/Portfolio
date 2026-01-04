@@ -5,6 +5,50 @@
     --light: #FAFAFB;
     --dark: #12141D;
 }
+* Social Icons Styling */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(98, 68, 197, 0.3);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(98, 68, 197, 0.5);
+            color: white;
+        }
+
+        .social-icon.google-scholar {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+        }
+
+        .social-icon.linkedin {
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+        }
+
+        .social-icon.github {
+            background: linear-gradient(135deg, #333 0%, #24292e 100%);
+        }
+
+        .social-icon.orcid {
+            background: linear-gradient(135deg, #a6ce39 0%, #8bc53f 100%);
+        }
+
 /* Floating Bubbles - FIXED */
 .bubbles-container {
     position: fixed;

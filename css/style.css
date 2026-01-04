@@ -11,11 +11,10 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 14px 32px;
+    padding: 12px 30px;
     background: #a855f7;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
     font-weight: 500;
     font-size: 15px;
     transition: all 0.3s ease;

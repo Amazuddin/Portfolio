@@ -5,6 +5,7 @@
     --light: #FAFAFB;
     --dark: #12141D;
 }
+
 .social-icons {
     display: flex;
     align-items: center;

@@ -10,8 +10,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* gap: 8px; */
-    /* padding: 12px 30px; */
+    gap: 8px;
+    padding: 12px 20px;
     background: #a855f7;
     color: white;
     text-decoration: none;

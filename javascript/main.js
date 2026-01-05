@@ -1,6 +1,5 @@
 (function ($) {
     "use strict";
-
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -14,8 +13,6 @@
     
     // Initiate the wowjs
     new WOW().init();
-
-
     // Navbar on scrolling
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -24,8 +21,6 @@
             $('.navbar').fadeOut('slow').css('display', 'none');
         }
     });
-
-
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
@@ -56,7 +51,15 @@
         return false;
     });
     
-
+    // WhatsApp float button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.whatsapp-float').fadeIn('slow');
+        } else {
+            $('.whatsapp-float').fadeOut('slow');
+        }
+    });
+    
     // Typed Initiate
     if ($('.typed-text-output').length == 1) {
         var typed_strings = $('.typed-text').text();
@@ -68,39 +71,28 @@
             loop: true
         });
     }
-
-
     // Modal Video
     var $videoSrc;
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
-    // console.log($videoSrc);
     $('#videoModal').on('shown.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-
     })
     $('#videoModal').on('hide.bs.modal', function (e) {
-        // $("#video").attr('src', $videoSrc);
-		$("#video iframe").attr("src", $("#video iframe").attr("src"));
+        $("#video iframe").attr("src", $("#video iframe").attr("src"));
     })
-
-
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
         delay: 10,
         time: 2000
     });
-
-
     // Skills
     $('.skill').waypoint(function () {
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
-
-
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
@@ -109,10 +101,8 @@
     $('#portfolio-flters li').on('click', function () {
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
-
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });	
-
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -121,9 +111,7 @@
         dots: true,
         loop: true,
     });
-
-
-//certificate and filter
+    //certificate and filter
     var certificateIsotope = $('.certificate-container').isotope({
         itemSelector: '.certificate-item',
         layoutMode: 'fitRows'
@@ -135,4 +123,3 @@
     });	
     
 })(jQuery);
-

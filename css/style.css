@@ -777,126 +777,73 @@ body {
 }
 
 /* ========================================
-   SKILLS SECTION
+   SKILLS SECTION - THREE TAB SYSTEM
 ======================================== */
-#skill .progress {
-    height: 5px;
-    border-radius: 5px;
-}
-
-#skill .progress .progress-bar {
-    width: 0px;
-    border-radius: 5px;
-    transition: 3s;
-}
-
-#skill .nav-pills .nav-link {
-    color: var(--dark);
-}
-
-#skill .nav-pills .nav-link.active {
-    color: #FFFFFF;
-}
-
-#skill .tab-content hr {
-    width: 30px;
-}
-
-/* Skill Category Styles */
-.skill-category {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-.skill-category:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transform: translateY(-3px);
-}
-
-.skill-category h5 {
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.badge {
-    font-weight: 500;
-    font-size: 0.9rem;
-}
-
-/* Experience & Education Timeline Styles */
-.timeline-item {
-    position: relative;
-    padding: 25px;
-    background: linear-gradient(145deg, #ffffff, #f8f9fa);
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    border-left: 4px solid #6c63ff;
-    margin-bottom: 20px;
-}
-
-.timeline-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.15);
-    border-left-width: 6px;
-}
-
-.timeline-item h5 {
-    color: #2d3748;
-    font-weight: 700;
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-}
-
-.timeline-date {
-    display: inline-block;
-    padding: 6px 15px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin: 10px 0;
-}
-
-.timeline-company {
-    color: #4a5568;
-    font-size: 1rem;
-    font-weight: 500;
+.custom-nav-pills-three {
     display: flex;
-    align-items: center;
-    margin-top: 8px;
-}
-
-.timeline-company i {
-    margin-right: 8px;
-    color: #667eea;
-}
-
-.custom-nav-pills .nav-link {
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 10px;
     border-radius: 50px;
-    padding: 15px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.custom-nav-pills-three .nav-item {
+    flex: 1;
+}
+
+.custom-nav-pills-three .nav-link {
+    border-radius: 50px;
+    padding: 15px 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid #667eea;
+    border: 2px solid transparent;
+    text-align: center;
+    color: #667eea;
+    background: white;
 }
 
-.custom-nav-pills .nav-link.active {
+.custom-nav-pills-three .nav-link:hover:not(.active) {
+    background: #f7fafc;
+    transform: translateY(-2px);
+    border-color: #667eea;
+}
+
+.custom-nav-pills-three .nav-link.active {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-color: transparent;
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
-.custom-nav-pills .nav-link:not(.active) {
-    background: white;
-    color: #667eea;
+.custom-nav-pills-three .nav-link i {
+    font-size: 1.1rem;
 }
 
-.custom-nav-pills .nav-link:hover:not(.active) {
-    background: #f7fafc;
-    transform: scale(1.02);
+/* Responsive for Three Tabs */
+@media (max-width: 991.98px) {
+    .custom-nav-pills-three {
+        flex-direction: column;
+        border-radius: 15px;
+        gap: 5px;
+    }
+    
+    .custom-nav-pills-three .nav-link {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .custom-nav-pills-three .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .custom-nav-pills-three .nav-link i {
+        font-size: 1rem;
+    }
 }
 
 /* ========================================
